@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Election</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-inverse fixed-top bg-dark justify-content-center">
+      <ul class="nav flex-row">
+          <p id="demo" class="navbar-logo"></p>
+
+        <ul class="nav flex-column">
+          <li class="nav-item">
+              <h5 >Election Voting System</h5>
+          </li>
+           <li class="nav-item">
+              <h6 >Voting For Prime Minister of The State of Israel</h6> 
+          </li>
+        </ul>
+      </ul>
+      
+
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm template";>
+              <div class="card">
+                <div >
+                  <img src="../images/lapid.jfif" class="card-img-top">
+                </div>
+              <div class="card-body">
+                <h6 class="card-title">Card title</h6>
+                <a href="#chartContainer" class="btn btn-primary btn-vote">Vote</a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <a href="#chartContainer" class="btn btn-primary btn-result">Show Results</a>
+  <div id="chartContainer"></div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+  </html>

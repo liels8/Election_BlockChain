@@ -1,0 +1,58 @@
+body{
+	text-align: center;
+	background-image: url(../images/background.jfif);
+	background-size:cover; padding-top: 5rem;
+}
+
+nav{
+	height: 80px;
+	width: 100%;
+}
+
+img{
+	height: 10rem; 
+	object-fit: cover;
+}
+
+hr{
+	opacity: 0;
+}
+p{
+	color: #ffffff;
+}
+
+.nav-item{
+	color: #ffffff;
+}
+
+.row {
+	text-align: center;
+}
+
+.card{
+	width: 10rem;
+	margin-left: 4rem;
+	padding: 0;
+}
+.card-title{
+	font-size: 15px;
+	font-weight: bold;
+}
+.btn-vote{
+	width: 100px;
+	height: 30px;
+	padding-top: 0;
+	padding-bottom: 30px;
+}
+
+.btn-result{
+	padding: 5px;
+}
+
+#chartContainer{
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5rem;
+}
+
