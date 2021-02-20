@@ -4,7 +4,7 @@ App = {
 
   init: async function() {
     $.getJSON('../candidates.json', function(data) {
-      var candRow = $('.row');
+      var candRow = $('.row-card');
 
       var candTemplate = $('.template');
       for (i = 0; i < data.length; i ++) {
@@ -64,17 +64,17 @@ App = {
     // Time to reload your interface with accounts[0]!
      $('#chartContainer').hide();
      App.isVoted();
-    });  
+    });
     $('.btn-vote').click(App.castVote);
     $('.btn-result').click(App.showResult);
   },
 
   castVote: function() {
     candidateId = $(this).attr("data-id");
-    App.contracts.Election.deployed().then(function(instance) { 
+    App.contracts.Election.deployed().then(function(instance) {
       return instance.vote(candidateId,{from: web3.eth.accounts[0] });
     }).then(function(){App.isVoted();});
-    
+
 
 
   },
@@ -95,17 +95,17 @@ App = {
     theme: "light2", // "light1", "light2", "dark1", "dark2"
     animationEnabled: true,
     title:{
-      text: "Election Results"              
+      text: "Election Results"
     },
 
     axisY: {
     title: "Votes"
     },
-    data: [              
+    data: [
     {
       // Change type to "doughnut", "line", "splineArea", etc.
-      type: "column",  
-      showInLegend: false, 
+      type: "column",
+      showInLegend: false,
       dataPoints: dataChart
     }
     ]
@@ -140,13 +140,12 @@ listenForEvents: function() {
 timer: function(){
   setInterval(async function() {
     var countDownDate = await App.contracts.Election.deployed().then(function(instance) { return instance.getTime({from: web3.eth.accounts[0] })});
-   
+
 
     var now = new Date().getTime();
 
     // Find the distance between now and the count down date
     var distance = countDownDate.toNumber()*1000 - now;
-    console.log(distance);
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -155,7 +154,7 @@ timer: function(){
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("demo").innerHTML ="Time Remaining: "+ days + "d " + hours + "h "
+    document.getElementById("demo").innerHTML =days + "d " + hours + "h "
     + minutes + "m " + seconds + "s ";
 
 
